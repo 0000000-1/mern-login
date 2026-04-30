@@ -10,7 +10,7 @@ export default function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5003/api/auth/login', { email, password });
+      const { data } = await axios.post('https://mern-login-theta.vercel.app/api/auth/login', { email, password });
       console.log(data)
       localStorage.setItem('token', data.token);
       alert('Login Successful!');

@@ -17,7 +17,7 @@ export default function Register() {
     setLoading(true);
     try {
       // Sends data to your backend
-      await axios.post('http://localhost:5003/api/auth/register', formData);
+      await axios.post('https://mern-login-theta.vercel.app/api/auth/register', formData);
       alert('Registration successful! Please login.');
       navigate('/login');
     } catch (err) {
