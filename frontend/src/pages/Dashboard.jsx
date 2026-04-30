@@ -18,7 +18,7 @@ export default function Dashboard() {
     // 2. Fetch protected data using the token
     const fetchUser = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5003/api/auth/profile', {
+        const { data } = await axios.get('https://mern-login-theta.vercel.app/api/auth/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUser(data);
